@@ -92,16 +92,3 @@ def add_virtual_column(df: pd.DataFrame, role: str, new_column: str) -> pd.DataF
     result_df = df.copy()
     result_df[new_column] = result
     return result_df
-
-
-# if __name__ == "__main__":
-#     df = pd.DataFrame({
-#         "sales":    [120, 85, 150, 60, 200],
-#         "cost":     [70, 40, 90, 30, 120],
-#         "tax":      [12, 8, 15, 6, 20],
-#         "discount": [5, 10, 0, 8, 15],
-#         "bonus":    [3, 5, 2, 4, 1],
-#     })
-
-#     print(add_virtual_column(df, "sales-cost+bonus*tax", "new_col"))
-#     print(add_virtual_column(df, "-sales", "new_col"))  # unary minus -> empty df
